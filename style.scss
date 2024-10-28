@@ -1,0 +1,23 @@
+@import "blog_preview";
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $primary;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0px;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

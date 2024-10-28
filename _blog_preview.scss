@@ -1,0 +1,15 @@
+// color variables
+$primary: #f4d04e;
+$secondary: #111111;
+$teritory: #6b6b6b;
+$white: #ffff;
+
+.card2 {
+  width: 300px;
+  background-color: $white;
+  &__image {
+    border-radius: 10px;
+    height: 200;
+    width: auto;
+  }
+}

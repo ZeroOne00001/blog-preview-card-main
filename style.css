@@ -1,0 +1,31 @@
+.card2 {
+  width: 300px;
+  background-color: white;
+}
+.card2__image {
+  border-radius: 10px;
+  height: 200;
+  width: auto;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4d04e;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0px;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
