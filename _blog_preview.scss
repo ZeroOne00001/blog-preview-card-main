@@ -4,12 +4,137 @@ $secondary: #111111;
 $teritory: #6b6b6b;
 $white: #ffff;
 
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+.text-1 {
+  font-size: 24px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 900;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $secondary;
+}
+
+.text-2 {
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $secondary;
+}
+
+.text-3 {
+  font-size: 14px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $secondary;
+}
+
+.text-3-bold {
+  font-size: 14px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 900;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $secondary;
+}
+
 .card2 {
-  width: 300px;
+  width: 327px;
   background-color: $white;
+  padding: 24px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 0 $secondary;
+  transition: box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__image {
     border-radius: 10px;
     height: 200;
-    width: auto;
+    width: 279px;
+  }
+
+  &__content {
+    padding: 24px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &__category {
+      @extend .text-3-bold;
+      font-size: 12px;
+      background-color: $primary;
+      width: fit-content;
+      padding: 4px 12px 4px 12px;
+      border-radius: 4px;
+    }
+    &__publishedDate {
+      @extend .text-3;
+      font-size: 12px;
+    }
+    &__title {
+      @extend .text-1;
+      font-size: 20px;
+      font-weight: 900;
+      transition: color 0.3s ease;
+    }
+    &__description {
+      @extend .text-2;
+      color: $teritory;
+      font-size: 14px;
+    }
+    &__avatar {
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+
+      img {
+        height: 32px;
+        width: 32px;
+      }
+
+      &__avatarName {
+        @extend .text-3-bold;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.card2:active,
+.card2:hover {
+  box-shadow: 20px 20px 0 $secondary;
+  &:hover .card2__content__title {
+    color: $primary;
+  }
+}
+
+// Responsive
+@media (min-width: 1024px) {
+  .card2 {
+    width: 384px;
+    &__image {
+      width: 336px;
+    }
   }
 }
